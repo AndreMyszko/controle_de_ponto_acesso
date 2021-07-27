@@ -1,6 +1,7 @@
 package projeto.controle_de_ponto_acesso.model;
 
 import lombok.*;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -8,7 +9,11 @@ import lombok.*;
 @NoArgsConstructor
 @EqualsAndHashCode
 @Builder
-public class NivelAcesso {
+
+public class Calendario {
     private Long id;
+    private TipoData tipoData;
     private String descricao;
+    private LocalDateTime dataEspecial;
+
 }

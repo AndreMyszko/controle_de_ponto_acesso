@@ -9,7 +9,7 @@ import lombok.*;
 @EqualsAndHashCode
 @Builder
 public class Empresa {
-    private long id;
+    private Long id;
     private String descricao;
     private String cnpj;
     private String endereco;

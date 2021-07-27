@@ -4,6 +4,8 @@ import lombok.*;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+import javax.persistence.ManyToOne;
+
 @Getter
 @Setter
 @AllArgsConstructor
@@ -11,11 +13,15 @@ import java.time.LocalDateTime;
 @EqualsAndHashCode
 @Builder
 public class Usuario {
-    private long id;
+    private Long id;
+    @ManyToOne
     private CategoriaUsuario categoriaUsuario;
     private String nome;
+    @ManyToOne
     private Empresa empresa;
+    @ManyToOne
     private NivelAcesso nivelAcesso;
+    @ManyToOne
     private JornadaTrabalho jornadaTrabalho;
     private BigDecimal tolerancia;
     private LocalDateTime inicioJornada;

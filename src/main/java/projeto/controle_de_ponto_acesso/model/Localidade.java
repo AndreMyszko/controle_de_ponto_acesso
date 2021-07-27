@@ -1,6 +1,6 @@
 package projeto.controle_de_ponto_acesso.model;
 
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
 
 import lombok.*;
 
@@ -11,8 +11,8 @@ import lombok.*;
 @EqualsAndHashCode
 @Builder
 public class Localidade {
-    private long id;
-    @OneToMany
+    private Long id;
+    @ManyToOne
     private NivelAcesso nivelAcesso;
     private String descricao;
 }

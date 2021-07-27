@@ -8,7 +8,8 @@ import lombok.*;
 @NoArgsConstructor
 @EqualsAndHashCode
 @Builder
-public class NivelAcesso {
+public class TipoData {
     private Long id;
     private String descricao;
+
 }
