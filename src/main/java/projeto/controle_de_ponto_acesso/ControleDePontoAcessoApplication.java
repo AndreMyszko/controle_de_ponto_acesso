@@ -16,7 +16,7 @@ public class ControleDePontoAcessoApplication {
 		SpringApplication.run(ControleDePontoAcessoApplication.class, args);
 	}
 
-	@Bean //adding swagger to api documentation -> usage: .../swagger-ui.html
+	@Bean //adding swagger to api documentation -> usage example: ----------------- http://localhost:8081/swagger-ui.html
 	public OpenAPI customOpenAPI(@Value("CONTROLE ACESSO") String description){
 		return new OpenAPI().info(new Info()
 			.title(description)
