@@ -1,5 +1,8 @@
 package projeto.controle_de_ponto_acesso.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 import lombok.*;
 
 @Getter
@@ -8,7 +11,9 @@ import lombok.*;
 @NoArgsConstructor
 @EqualsAndHashCode
 @Builder
+@Entity
 public class Empresa {
+    @Id
     private Long id;
     private String descricao;
     private String cnpj;

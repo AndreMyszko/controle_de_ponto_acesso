@@ -4,6 +4,10 @@ import lombok.*;
 import java.io.Serializable;
 import javax.persistence.Embeddable;
 import javax.persistence.EmbeddedId;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
 import java.time.LocalDateTime;
 import java.math.BigDecimal;
 
@@ -13,8 +17,8 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @EqualsAndHashCode
 @Builder
+@Entity
 public class Movimentacao {
-
     @AllArgsConstructor
     @NoArgsConstructor
     @EqualsAndHashCode
@@ -23,13 +27,14 @@ public class Movimentacao {
         private Long idMovimento;
         private Long idUsuario;
     }
-    
     @EmbeddedId
     private MovimentacaoId id;
     private LocalDateTime dataEntrada;
     private LocalDateTime dataSaida;
     private BigDecimal periodo;
+    @ManyToOne
     private Ocorrencia ocorrencia;
+    @ManyToOne
     private Calendario calendario;
     
 }
