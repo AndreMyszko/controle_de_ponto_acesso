@@ -25,13 +25,16 @@ dependencies {
 
 	implementation group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-xml', version: '2.12.4'
 	
+	implementation group: 'org.hibernate', name: 'hibernate-validator', version: '6.1.5.Final'
+	implementation group: 'org.hibernate', name: 'hibernate-envers', version: '5.4.23.Final'
+
 	runtimeOnly 'mysql:mysql-connector-java'
 	implementation 'com.h2database:h2'
 
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 
-	implementation group: 'io.springfox', name: 'springfox-swagger2', version: '3.0.0'
+implementation group: 'org.springdoc', name: 'springdoc-openapi-ui', version: '1.5.2'
 
 	testImplementation ('org.springframework.boot:spring-boot-starter-test'){
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
